@@ -89,3 +89,75 @@ While an empty `__init__.py` is all that's required for a directory to function 
 * **Initialize package-wide variables.**
 * **Import sub-modules** to make them directly accessible from the top-level package, simplifying imports for users. For example, if you have a `helpers.py` file, you could add the line `from . import helpers` to `__init__.py` so that users can write `from mypackage import helpers` instead of `from mypackage.helpers import helpers`.
 * **Define `__all__`**, which specifies the modules to be imported when a user runs `from mypackage import *`.
+
+**Prompt 3**:
+how to push tags on github
+
+**Output 3**:
+Pushing tags to GitHub involves two main steps: **creating the tag locally** and then **pushing the tag** to the remote repository.
+
+Here's a step-by-step guide using the command line:
+
+## 1\. Create the Tag Locally
+
+First, you need to create the tag in your local Git repository. Tags are typically used to mark specific points in your repository's history, like release points.
+
+### Lightweight vs. Annotated Tags
+
+Git has two main types of tags:
+
+  * **Lightweight tags** are just a pointer to a specific commit.
+  * **Annotated tags** are stored as full objects in the Git database. They contain the tagger's name, email, and date, and allow for a tagging message. **Annotated tags are generally recommended** for releases as they provide more metadata and are more secure.
+
+### Command to Create an Annotated Tag
+
+Use the following command, replacing `v1.0.0` with your desired tag name and the text in quotes with your tagging message:
+
+```bash
+git tag -a v1.0.0 -m "Initial stable release"
+```
+
+  * `-a` stands for annotated.
+  * `-m` allows you to provide a message for the tag.
+
+### Command to Create a Lightweight Tag (Less Recommended)
+
+```bash
+git tag v1.0.0
+```
+
+### Verification
+
+To see the list of tags you've created locally, use:
+
+```bash
+git tag
+```
+
+-----
+
+## 2\. Push the Tag to GitHub
+
+Tags are not automatically included when you run `git push` to push your branches. You must explicitly push them.
+
+### Push a Single Tag
+
+To push the specific tag you just created (e.g., `v1.0.0`):
+
+```bash
+git push origin v1.0.0
+```
+
+  * `origin` is typically the default name for your remote GitHub repository.
+
+### Push All Tags
+
+If you have multiple tags you want to push simultaneously, you can use the `--tags` option:
+
+```bash
+git push origin --tags
+```
+
+  * This command pushes all of your local tags to the remote repository.
+
+Once pushed, the tag will be visible on your GitHub repository's main page and in the "Releases" section.
