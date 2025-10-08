@@ -1,7 +1,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/hw-2-nehasuresh612/HEAD?urlpath=%2Fdoc%2Ftree%2FLOSC_Event_tutorial.ipynb)
 
 ## Basic Description of Project
-In this project, I explored remote repositories, good git practices, modularization for package creation, creating an environment using Conda, and adding Binder Support. I learned how to move from a locally running notebook to something that anyone can access via a Binder link.
+In this project, I explored remote repositories, good git practices, modularization for package creation, creating an environment using Conda, and adding Binder Support. I learned how to move from a locally running notebook (LOSC_Event_tutorial.ipynb) to something anyone can access via a Binder link to reproduce research from the LIGO center referenced below.
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/y12QcJaO)
 # HW 2: From Notebooks to Research Packages
